@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ Boris Haesler | Hamburg</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        /* Lädt zusätzliche Schriftstärken (300=light, 600=semibold) */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 
         :root {
             --background-color: #1a202c; /* Dunkles Blau/Anthrazit */
@@ -30,7 +31,8 @@
         }
         
         .logo-image {
-            max-width: 180px; /* Du kannst diese Grösse später anpassen */
+            /* 1. Logo um 30% verkleinert (180px * 0.7 = 126px) */
+            max-width: 126px; 
             height: auto;
             margin-bottom: 2.5rem;
         }
@@ -38,7 +40,13 @@
         h1 {
             font-size: 2.2rem;
             margin: 0;
-            font-weight: 700;
+            /* 3. Schrift dünner gemacht (von 700 auf 600) */
+            font-weight: 600;
+        }
+        
+        /* 2. Klasse für das "DJ" Präfix */
+        .dj-prefix {
+            color: var(--accent-color);
         }
 
         h1 .location {
@@ -54,6 +62,8 @@
             border-bottom: 1px solid var(--accent-color);
             padding-bottom: 3px;
             font-size: 1.1rem;
+            /* 3. E-Mail Schrift ebenfalls dünner gemacht */
+            font-weight: 300;
         }
     </style>
 </head>
@@ -62,11 +72,10 @@
         
         <img src="logo.jpg" alt="BH Logo" class="logo-image">
 
-        <h1>DJ Boris Haesler <span class="location">| Hamburg</span></h1>
+        <h1><span class="dj-prefix">DJ</span> Boris Haesler <span class="location">| Hamburg</span></h1>
         
         <a href="mailto:haesler.dj@gmail.com" class="email-link">haesler.dj@gmail.com</a>
 
     </div>
 </body>
 </html>
-
